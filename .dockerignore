@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.gitignore
+*.md
+.env*
+!.env.example
+supabase/.temp
+tmp-sample.docx
+coverage
+.vscode
+.cursor
+agent-transcripts

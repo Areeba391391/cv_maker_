@@ -1,0 +1,19 @@
+# AWS Amplify Hosting — Next.js SSR (WEB_COMPUTE)
+# Do NOT set output: "standalone" for Amplify (see next.config.ts).
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - .next/cache/**/*
+      - node_modules/**/*
